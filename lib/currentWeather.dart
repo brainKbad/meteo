@@ -487,35 +487,145 @@ class CityList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('List of cities'),
-      ),
-      body: Column(children: [
+     /* appBar: AppBar(
+        title: const Text('List of cities',
+        style: TextStyle(
+          color: Color(0xffF5591F),
+        ),),
+      ),*/
+      body: Column(children: [Container(
+              height: 80,
+              decoration: BoxDecoration(
+                //borderRadius: BorderRadius.only(bottomLeft: Radius.circular(120)),
+                gradient: LinearGradient(
+                  colors: [(new Color(0xffF5591F)), (new Color(0xffF5591F))],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter
+                )
+              ),
+              child: Center(
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                 /* Container(
+                    margin: EdgeInsets.only(top: 50),
+                    //child: Image.asset(name),
+                    height: 30,
+                    width: 30,),*/
+
+                    Container(
+                      margin: EdgeInsets.only(right: 20, top: 20),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "List of Cities",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white
+                        ),
+                      ),)
+                ],),
+              ),
+              ),
+
+
+
         Container(
+        margin: EdgeInsets.only(left: 20, right: 20, top: 200),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  alignment: Alignment.center,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [(new Color(0xffF5591f)), (new Color(0xffF2861E))],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight
+                    ),
+                    borderRadius: BorderRadius.circular(50),
+                    boxShadow: [BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE),
+                      
+                    )],
+                  ),
+                  
+        
+       // Center(
           
-        ),
-        Center(
-          
-           child: ElevatedButton(
+           child: TextButton(
            onPressed: () {
+
+             
+             
+             
             // Navigate back to first route when tapped.
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) =>  CurrentWeather(city: 'Abidjan',lon : '-4.0197', lat: '5.3094')),
             );
           },
-          child: const Text('Abidjan'),
+          child: const Text('Abidjan',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white
+
+          ),),
         ),),
-        ElevatedButton(
+
+        Container(
+        margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  alignment: Alignment.center,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [(new Color(0xffF5591f)), (new Color(0xffF2861E))],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight
+                    ),
+                    borderRadius: BorderRadius.circular(50),
+                    boxShadow: [BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE)
+                    )],
+                  ),
+        child : TextButton(
            onPressed: () {
             // Navigate back to first route when tapped.
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) =>  CurrentWeather(city: 'Paris',lon: '2.3488', lat: '48.8534')),
             );},
-          child: const Text('Paris'),
+          child: const Text('Paris',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white
+
+          ),),
         ),
-        ElevatedButton(
+        ),
+        
+        Container(
+        margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  alignment: Alignment.center,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [(new Color(0xffF5591f)), (new Color(0xffF2861E))],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight
+                    ),
+                    borderRadius: BorderRadius.circular(50),
+                    boxShadow: [BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE)
+                    )],
+                  ),
+        child :TextButton(
            onPressed: () {
             // Navigate back to first route when tapped.
             Navigator.push(
@@ -523,9 +633,14 @@ class CityList extends StatelessWidget {
               MaterialPageRoute(builder: (context) => CurrentWeather(city: 'Bruxelles',lon: '4.3488', lat: '50.8504')),
             );
           },
-          child: const Text('Bruxelles'),
-        ),
-      ],)
+          child: const Text('Bruxelles',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white
+
+          ), ),
+          ),
+       ) ],)
     );
   }
 }
